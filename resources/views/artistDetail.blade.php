@@ -83,20 +83,7 @@
                            
                         </span> 
                         
-                        
-                    </div>
-                        <div class="form-group form_button_details">
-                            <header class="not_bg">Hide Hours</header>
-                            <div class="custom input_number_product custom-btn-number form-control">	
-                                <button class="btn_num num_2 button button_qty" onclick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;" type="button">+</button>
-                                <button class="btn_num num_1 button button_qty" onclick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro > 1 ) result.value--;return false;" type="button">-</button>
-                                <input type="text" id="qtym" name="quantity" value="1" class="form-control prd_quantity" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" onchange="if(this.value == 0)this.value=1;">
-                            </div>                                                               
-                            <button type="submit" class="btn btn-lg  btn-cart button_cart_buy_enable add_to_cart btn_buy">
-                                <span>Add to list</span>
-                            </button>									                          
-                        </div>
-                    </div>                   
+                                 
                    
                                                 
                 </div>
