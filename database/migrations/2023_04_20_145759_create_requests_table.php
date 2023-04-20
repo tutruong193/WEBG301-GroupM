@@ -16,6 +16,8 @@ return new class extends Migration
             $table->String('FirstName');
             $table->String('LastName');
             $table->String('Img');
+            $table->foreignId('request_id')->constrained('request');
+            $table->foreignId('customer_id')->constrained('customer');
             $table->timestamps();
         });
     }

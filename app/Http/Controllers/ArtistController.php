@@ -11,5 +11,10 @@ class Artist extends Model
     protected $table = 'artists';
     protected $primaryKey = 'id';
     protected $fillable = ['Firstname', 'Lastname', 'Description','Birthdate','Img'];
+
+    public function Request()
+    {
+        return $this->hasOne(Request::class);
+    }
     
 }
