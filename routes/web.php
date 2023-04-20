@@ -13,8 +13,6 @@ use App\Http\Controllers\ArtistController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/home', [ArtistController::class, 'index']);
+Route::get('/', function () {
+    return view('welcome');
+});

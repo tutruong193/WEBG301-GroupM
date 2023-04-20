@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{asset('css/giaodien.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/icon/themify-icons/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('icon/themify-icons/themify-icons.css')}}">
     
 </head>
 <body>
@@ -26,7 +26,7 @@
                     <div class="btn_searching row">
                     <form action="./hienthi_search.php" method="post">
                         <input type="text" name="searching_name">
-                        <button type ="submit"><i class="ti-search"></i></input>
+                        <button type ="submit"><i class="ti-search"></i>
                     </form>
                     </div>
                     <div class="btn_user">
