@@ -1,4 +1,4 @@
-<div class="details-product">
+<!-- <div class="details-product">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="rows row-width">
             <form enctype="multipart/form-data" id="add-to-cart-form" action="/cart/add" method="post" class="row form-width form-inline">
@@ -101,12 +101,12 @@
 <link href="vn" rel="stylesheet" type="text/css" media="all">
 <div class="app_buyx_promotion"></div>
 </form>
-            <!-- Tab -->
+
             <div class="tab_width_full">
                 <div class="row xs-margin-top-15">
                     
                     <div id="tab_ord" class="col-xs-12 col-sm-12 col-lg-12 col-md-12">
-                        <!-- Nav tabs -->
+
                         <div class="product-tab e-tabs not-dqtab">
                             <span class="border-dashed-tab"></span>
                             <ul class="tabs tabs-title clearfix">	
@@ -145,7 +145,7 @@
 
                 </div>
             </div>
-            <!-- Endtab -->
+
         </div>
     </div>
-</div>
+</div> -->
