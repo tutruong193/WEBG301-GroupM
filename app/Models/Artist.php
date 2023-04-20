@@ -11,4 +11,9 @@ class Artist extends Model
     protected $table = 'artists';
     protected $primaryKey = 'id';
     protected $fillable = ['Firstname', 'Lastname', 'Description','Birthdate','Img'];
+
+    public function getCategory()
+    {
+        return $this->belongsToMany(Category::class,'artist_id', 'id');
+    }
 }
