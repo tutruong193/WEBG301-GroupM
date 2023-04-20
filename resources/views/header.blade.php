@@ -26,7 +26,7 @@
                     <div class="btn_searching row">
                     <form action="./hienthi_search.php" method="post">
                         <input type="text" name="searching_name">
-                        <button type ="submit"><i class="ti-search"></i></input>
+                        <button type ="submit"><i class="ti-search"></i>
                     </form>
                     </div>
                     <div class="btn_user">
