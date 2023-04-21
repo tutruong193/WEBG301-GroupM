@@ -14,5 +14,5 @@ use App\Http\Controllers\ArtistController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
