@@ -23,12 +23,12 @@
                 <!--end nav-->
                 <!--begin search button-->
                 <div class="btn row">
-                    <div class="btn_searching row">
+                    <!-- <div class="btn_searching row">
                     <form action="./hienthi_search.php" method="post">
                         <input type="text" name="searching_name">
                         <button type ="submit"><i class="ti-search"></i>
                     </form>
-                    </div>
+                    </div> -->
                     <div class="btn_user">
                     <a href="{{asset('artist')}}"><i class="search-icon ti-user"></i></a>
                     </div>

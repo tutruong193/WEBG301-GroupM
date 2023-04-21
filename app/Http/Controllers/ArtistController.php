@@ -12,4 +12,11 @@ class ArtistController extends Controller
         $artists = Artist::all();
         return view('home', ['artists' => $artists]);
     }
+
+    public function show(string $id)
+    {
+        $artist = Artist::find($id);
+        // dd($car);
+        return view('artistDetail', ['artist' => $artist]);
+    }
 }

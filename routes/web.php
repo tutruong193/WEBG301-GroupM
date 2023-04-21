@@ -16,3 +16,8 @@ use App\Http\Controllers\ArtistController;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/home', [ArtistController::class, 'index']);
+
+Route::get('/detail', [ArtistController::class, 'show']);
+
+Route::resource('artists', ArtistController::class);
