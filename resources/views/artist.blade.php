@@ -1,6 +1,6 @@
  @extends('header')
 <head>
-    <link rel="stylesheet" href="{{asset('css/sanpham.css')}}">
+    <link rel="stylesheet" href="{{asset('css/artistDetail.css')}}">
 </head>
 <div id="cartegory">
     <h1 class="cartegory-heading-big">
