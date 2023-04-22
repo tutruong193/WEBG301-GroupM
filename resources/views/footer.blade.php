@@ -24,3 +24,4 @@
             <div class="copyright">Bản quyền thuộc về Trương Anh Tú</div>
         </div>
     </div>
+    @extends('footer')
