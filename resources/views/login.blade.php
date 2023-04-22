@@ -1,4 +1,9 @@
 @extends('header')
+
+<header>
+    <link rel="stylesheet" href="{{asset('css/login.css')}}">
+</header>
+
 <div class="login-sign-up-content">
     <div class="login-signup-content-title row">
         <div class="login-heading">
