@@ -14,13 +14,10 @@ use App\Http\Controllers\ArtistController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
-Route::get('/admin', function () {
-    return view('admin-artist');
-});
+
 Route::get('/home', [ArtistController::class, 'index']);
-
+Route::get('/adminartist', [ArtistController::class, 'index1']);
 Route::get('/detail', [ArtistController::class, 'show']);
-
 Route::resource('artists', ArtistController::class);
