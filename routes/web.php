@@ -16,6 +16,9 @@ use App\Http\Controllers\ArtistController;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/admin', function () {
+    return view('admin-artist');
+});
 Route::get('/home', [ArtistController::class, 'index']);
 
 Route::get('/detail', [ArtistController::class, 'show']);
