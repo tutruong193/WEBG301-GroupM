@@ -14,8 +14,13 @@
                         <img src="{{$artist -> Img}}" alt="">
                         <h1>{{$artist -> FirstName}} {{$artist -> LastName}}</h1>
                         <p>{{$artist ->BirthDate }}</p>
+                        <p>{{$artist -> Description}}</p>
+                        <button type="submit" style="width:25%;height:40px ;background-color: rgb(186, 51, 51); border-radius:5px" >
+                            <i class="ti-shopping-cart" name="add-to-cart" style="padding-left:10px; color:white;font-style:initial"> Add list</i>
+                        </button>
                     </div>
                 </a>
+            </div>
             @endforeach
         </div>
     </div>
