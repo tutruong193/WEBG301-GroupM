@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArtistController extends Controller
 {
@@ -33,24 +34,19 @@ class ArtistController extends Controller
     {
         $artist = Artist::find($id);
         $artist->delete();
-        return redirect('/adminartist')->with('success', 'artist deleted successfully.');
+        return redirect('/admin/artist')->with('success', 'artist deleted successfully.');
     }
     public function update(Request $request, $id)
     {
-        $artist = artist::find($id);
+        $artist = Artist::find($id);
         $artist->FirstName = $request->FirstName;
         $artist->LastName = $request->LastName;
         $artist->BirthDate = $request->BirthDate;
         $artist->Img = $request->Img;
         $artist->Price = $request->Price;
         $artist->Description = $request->Description;
-        if (empty($firstName) || empty($lastName) || empty($birthDate) || empty($img) || empty($description)) {
-            // Hiển thị popup thông báo yêu cầu điền đầy đủ thông tin
-            return redirect()->back()->with('error', 'Vui lòng điền đầy đủ thông tin.');
-        }
         $artist->save();
-        // return redirect('/adminartist')->with('success', 'artist updated successfully.');
-        return redirect()->back()->with('success', 'Thêm mới thành công.');
+        return redirect('/admin/artist')->with('success', 'artist updated successfully.');
     }
 
    public function store(Request $request)
@@ -72,10 +68,11 @@ class ArtistController extends Controller
         $artist->Price = $request->Price;
         $artist->Description = $request->Description;
         $artist->save();
-       return redirect('/adminartist')->with('success', 'artist created successfully.');
+       return redirect('/admin/artist')->with('success', 'artist created successfully.');
    }
    public function create()
     {
         return view('adminAdd');
     }
+ 
 }
