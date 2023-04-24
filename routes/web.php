@@ -29,15 +29,8 @@ Route::middleware([checkLogin::class])->group(function () {
     Route::resource('artists', ArtistController::class);
     Route::resource('requests', RequestController::class);
 });
+Route::get('/artist', [ArtistController::class, 'index'])->name('artist');
 Route::resource('artists', ArtistController::class);
-
-Route::resource('customers', CustomerController::class);
-Route::get('/register',[CustomerController::class, 'index']);
-Route::post('/register', [CustomerController::class, 'store'])->name('customers.store');
-Route::get('contact',[MainController::class,'contact']);
-
-
-
 Route::get('/logout', [LoginController::class, 'logout']);
 
 // Route::get('/home', [ArtistController::class, 'index']);
