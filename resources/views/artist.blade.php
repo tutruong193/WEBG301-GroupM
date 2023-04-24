@@ -1,6 +1,6 @@
  @extends('header')
 <head>
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/giaodien.css')}}">
 </head>
 
 <div id="cartegory">
@@ -10,19 +10,21 @@
     <div class="cartegory-kit">
         <div class="cartegory-products row">
               @foreach($artists as $artist)
-              <a href="{{ route('artists.show', $artist->id) }}" id="">
+              
                     <div class="cartegory-kit-products-item">
+                    <a href="{{ route('artists.show', $artist->id) }}" id="">
                         <img src="{{$artist -> Img}}" alt="">
                         <h1>{{$artist -> FirstName}} {{$artist -> LastName}}</h1>
                         <p>{{$artist ->BirthDate }}</p>
                         <p>{{$artist -> Description}}</p>
-                        <button type="submit" style="width:25%;height:40px ;background-color: rgb(186, 51, 51); border-radius:5px" >
+                        <button type="submit" >
                             <i class="ti-shopping-cart" name="add-to-cart" style="padding-left:10px; color:white;font-style:initial"> Add list</i>
                         </button>
+                        </a>
                     </div>
-                </a>
+                
+                @endforeach
             </div>
-            @endforeach
         </div>
     </div>
 </div>

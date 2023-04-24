@@ -1,68 +1,34 @@
-@extends('header')
-<head>
-    <link rel="stylesheet" href="{{asset('css/user.css')}}">
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/thongtin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
 </head>
-<form method='post'>
-    <div class="container">
-        <h2>Profile</h2>
-        <table cellpadding='0' cellspacing='0'>
-            <tr>
-                <td>
-                    ID:
-                </td>
-                <td>
-                    <input type='text' name='username' value="{{$users -> id}}" disabled />
-                </td>
-            </tr>
-                <tr>
-                    <td>
-                        Name:
-                    </td>
-                    <td>
-                        <input type='text' name='fullname' value="{{$users -> name}}" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Email:
-                    </td>
-                    <td>
-                        <input type='text' name='email' value="{{$user -> email}}" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Password:
-                    </td>
-                    <td>
-                        <input type='text' name='password'value="{{$user-> Password}}" />
-                    </td>
-                </tr>
-                {{-- <tr>
-                    <td>
-                        Address:
-                    </td>
-                    <td>
-                        <input type='text' name='address'value="{{xxx}}" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Number:
-                    </td>
-                    <td>
-                        <input type='text' name='number'value="{{xxx}}" />
-                    </td> --}}
-                </tr>  
-                
-                
 
-        </table>
-        <div class="button">
-            <input type="submit" name="update" value="Update" style=" width:280px">
-            <input type="submit" name="home" value="Home"style="width:280px">
-        </div>
-    </div>
-
+<body>
+<form method = "POST" action="{{ route('users.update', $user->id) }}">
+@csrf
+ @method('PUT')
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="name" value="{{$user -> name}}">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Email</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="email" value="{{$user -> email}}"> 
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="password"  value="{{$user -> password}}">
+</div> 
+  <div class="button">
+  <button type="submit" class="btn btn-primary" name="update">Submit</button>
+  <button type="submit" class="btn btn-primary" name="home">Back to home</button>
+  </div>
 </form>
-  @extends('footer')
+</body>
+
+</html>

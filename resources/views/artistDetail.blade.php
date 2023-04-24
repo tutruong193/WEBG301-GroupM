@@ -8,19 +8,22 @@
         <div class="container">
             <p style="font-size: 30px; font-weight:bold; padding:20px">Information of {{$artist -> FirstName}} {{$artist -> LastName}}</p>
             <div class="product-content row" >
-                <div class="product-content-left row "style="width:50%"  >
+                <div class="product-content-left row"  >
                     <div class="product-content-left-big-img" >
-                        <img src="{{$artist -> Img}}" alt="" style="width:100%">
+                        <img src="{{$artist -> Img}}" alt="" >
 
                     </div>
                 </div>
                 <div class="product-content-right" style="width: 50%">
-                   
+                <form action="./add_cartegory.php" method="POST">
                         <div class="product-content-right-product-name">
                             <p style="font-size:20px;color:black;font-weight:bold;">{{$artist -> FirstName}} {{$artist -> LastName}}</p>
                         </div>
                         <div class="product-content-right-product-birthdate">
                             <p>{{$artist -> BirthDate}}</p>
+                        </div>
+                        <div class="product-content-right-product-description">
+                            <p>{{$artist -> Price}}</p> 
                         </div>
                         <div class="product-content-right-product-description">
                             <p>{{$artist -> Description}}</p> 
@@ -30,8 +33,7 @@
                                 <i class="ti-shopping-cart" name="add-to-cart" style="padding-left:10px; color:white;font-style:initial"> Add list</i>
                             </button>
                         </div>
-                  
-                   
+                </form>
                 </div>
             </div>
         </div>

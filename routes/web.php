@@ -4,6 +4,7 @@ use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\RequestController;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\checkLogin;
 
 /*
@@ -30,6 +31,12 @@ Route::middleware([checkLogin::class])->group(function () {
     Route::resource('requests', RequestController::class);
 });
 Route::resource('artists', ArtistController::class);
+Route::resource('users', UserController::class);
+Route::get('/contact', [MainController::class, 'contact'])->name('contact');
+Route::get('/artist', [ArtistController::class, 'index2'])->name('artistlist');
+Route::get('/edit', [UserController::class, 'index'])->name('profile.edit');
+Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
+
 Route::get('/logout', [LoginController::class, 'logout']);
 // Route::get('/home', [ArtistController::class, 'index']);
 // Route::get('/artistAdd', [ArtistController::class, 'store']);

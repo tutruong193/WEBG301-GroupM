@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -11,23 +14,35 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+  <link rel="stylesheet" type="text/css" href="{{asset('css/giaodien.css')}}">
+  <link rel="stylesheet" href="{{asset('icon/themify-icons/themify-icons.css')}}">
 
-  <title>Energym</title>
-
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap"
-    rel="stylesheet" />
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
 </head>
+<div class = "header">
+        <div id="header">
+            <!--begin-->
+                <ul id="nav">
+                    <li><a href="./giaodien.php">Home</a></li>
+                    <li><a href="#" >Introduction</a></li>
+                    <li><a href="{{route('artistlist')}}" >Artist List</a></li>
+                    <li><a href="{{route('contact')}}" >Contacts</a></li>
+                </ul>
+                <!--end nav-->
+                <!--begin search button-->
+                <div class="btn row">
+                    <div class="btn_user">
+                    <a href="/edit"><i class="search-icon ti-user"></i></a>
+                    </div>
+                    <div class="btn_giohang">
+                    <a href="./giohang.php"><i class="shopping-icon ti-shopping-cart-full"></i></a>
+                    </div>
+                    <div class="btn_logout">
+                    <a href="/logout"><i class="ti-share logout-icon"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+    </div>
+  
 
 @yield('main-content')

@@ -9,4 +9,4 @@
         <p><i class="ti-email"></i>leminhhoang@gmail.com</p>
         <p><i class="ti-email"></i>vuthanhdat@gmail.com</p>
     </div>
-@extends('header')
+@extends('footer')
