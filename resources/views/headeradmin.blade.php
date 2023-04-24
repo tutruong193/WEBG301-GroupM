@@ -40,7 +40,13 @@
     </ul>
 
     <!-- Right navbar links -->
-    
+    <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="/logout" role="button">
+      Log Out
+      </a>
+</li>
+    </ul>
   </nav>
   <!-- /.navbar -->
 

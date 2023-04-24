@@ -7,11 +7,6 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
-
-    public function contact()
-    {
-        return view('contact');
-    }
     public function index(){
         $artists = Artist::all(); // Truy vấn dữ liệu từ model Artist
         return view('adminArtist',[
@@ -24,10 +19,5 @@ class MainController extends Controller
         return view('home',[
             'artists' => $artists // Truyền dữ liệu của model Artist vào view
         ]);
-
-    }
-    public function introduction()
-    {
-        return view('introduction');
     }
 }

@@ -29,15 +29,12 @@ Route::middleware([checkLogin::class])->group(function () {
     Route::resource('artists', ArtistController::class);
     Route::resource('requests', RequestController::class);
 });
-Route::get('/artist', [ArtistController::class, 'index'])->name('artist');
 Route::resource('artists', ArtistController::class);
 Route::get('/logout', [LoginController::class, 'logout']);
-
 // Route::get('/home', [ArtistController::class, 'index']);
 // Route::get('/artistAdd', [ArtistController::class, 'store']);
 // Route::get('/adminartist', [ArtistController::class, 'index1'])->name('adminartist');
 // Route::post('/adminartist', [LoginController::class, 'postLogin'])->name('login.post'); 
 // Route::get('/detail', [ArtistController::class, 'show']);
 // Route::resource('artists', ArtistController::class);
-
 
