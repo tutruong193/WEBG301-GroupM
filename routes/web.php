@@ -30,12 +30,15 @@ Route::middleware([checkLogin::class])->group(function () {
     Route::resource('requests', RequestController::class);
 });
 Route::resource('artists', ArtistController::class);
-<<<<<<< HEAD
+
 Route::resource('customers', CustomerController::class);
 Route::get('/register',[CustomerController::class, 'index']);
 Route::post('/register', [CustomerController::class, 'store'])->name('customers.store');
 Route::get('contact',[MainController::class,'contact']);
-=======
+
+
+
+Route::get('/logout', [LoginController::class, 'logout']);
 
 // Route::get('/home', [ArtistController::class, 'index']);
 // Route::get('/artistAdd', [ArtistController::class, 'store']);
@@ -44,4 +47,4 @@ Route::get('contact',[MainController::class,'contact']);
 // Route::get('/detail', [ArtistController::class, 'show']);
 // Route::resource('artists', ArtistController::class);
 
->>>>>>> a9cc65568e528170ed504be3e12acb3c7ed59259
+
