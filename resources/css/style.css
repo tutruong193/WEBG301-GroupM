@@ -37,56 +37,7 @@ html{
     right: 0;
     z-index: 1;
 }
-#nav, .subnav{
-    list-style-type: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-#nav {
-    display: inline-block;
-}
-#nav > li{
-    display: inline-block;
-}
-#nav li{
-    position: relative;
-}
-#nav > li > a{
-    color: #fff;
-    text-transform: uppercase;
-}
-#nav li a{
-    color: #fff;
-    text-decoration: none;
-    line-height: 46px;
-    padding: 0 24px;    
-    display: block;
-}
 
-#nav li:hover .subnav{
-    display: block;
-}
-
-#nav > li:hover > a,
-#nav .subnav li:hover a {
-    color: #000;
-    background-color: #ccc;
-   
-}
-#nav .subnav{
-    display: none;
-    min-width: 160px;
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-#nav .subnav a{
-    color: black;
-    padding: 0 16px;
-    line-height: 38px;
-}
-#nav .nav-arrow-down{
-    font-size: 14px;
-}
 #header .btn{
     float: right;
     text-decoration: none;
@@ -122,34 +73,14 @@ html{
     margin-right: 5%;
     height: fit-content;
 }
-.product-top{
-    padding-top:0;
-    line-height: 25px;
-    font-size: 12px;
-    margin: 0 5px;
-    margin-bottom: 10px;
-}
-.product-top i{
-    padding-top: 5px;
-    padding-left: 5px;
-}
 .product-content-left{
     width: 50%;
 }
 .product-content-left-big-img{
-    width: 80%;
-    padding-right: 10px;
-}
-.product-content-left-big-img img{
-    width: 100%;
-}
-.product-content-left-smaill-img{
     width: 20%;
+    padding-right: 100px;
 }
-.product-content-left-smaill-img img{
-    width: 100%;
-    cursor: pointer;
-}
+
 .product-content-right{
     width: 50%;
     padding-left: 20px;
@@ -163,7 +94,7 @@ html{
     color: rgb(126, 89, 89);
     font-size: 12px;
 }
-.product-content-right-product-price{
+.product-content-right-product-birthdate{
     margin: 12px 0;
     font-size: 20px;
     font-weight: bold;
@@ -176,11 +107,11 @@ html{
     font-size: 12px;
     cursor: pointer;
 }
-.product-content-right-product-quantity{
+.product-content-right-product-description{
     display: flex;
     margin-bottom: 20px;
 }
-.product-content-right-product-quantity input{
+.product-content-right-product-quantity description{
     width: 40px;
     padding-left: 3px;
 }
