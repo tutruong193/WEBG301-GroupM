@@ -81,7 +81,7 @@
                with font-awesome or any other icon font library -->
           
           <li class="nav-item">
-            <a href="{{asset('adminartist')}}" class="nav-link">
+            <a href="{{asset('/admin/artist')}}" class="nav-link">
                 Artist
             </a>
           </li>
