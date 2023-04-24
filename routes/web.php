@@ -30,7 +30,7 @@ Route::middleware([checkLogin::class])->group(function () {
     Route::resource('requests', RequestController::class);
 });
 Route::resource('artists', ArtistController::class);
-
+Route::get('/logout', [LoginController::class, 'logout']);
 // Route::get('/home', [ArtistController::class, 'index']);
 // Route::get('/artistAdd', [ArtistController::class, 'store']);
 // Route::get('/adminartist', [ArtistController::class, 'index1'])->name('adminartist');
