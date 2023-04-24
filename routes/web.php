@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\RequestController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +31,4 @@ Route::resource('artists', ArtistController::class);
 Route::resource('customers', CustomerController::class);
 Route::get('/register',[CustomerController::class, 'index']);
 Route::post('/register', [CustomerController::class, 'store'])->name('customers.store');
+Route::get('contact',[MainController::class,'index']);

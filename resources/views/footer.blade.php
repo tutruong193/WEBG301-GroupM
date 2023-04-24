@@ -3,7 +3,7 @@
         <h2 class="row-heading">Manage Artist</h2>
         <div class="row">
             <div class="col col-half khoangcachdong">
-                <h2 class="heading">about us</h2>
+                <h2 class="heading">About us</h2>
                <p>Introducing a reputable artist management company with professional credibility. With industry expertise, comprehensive artist development services, and trustworthiness, they provide guidance, strategic planning, and ethical representation for artists in the competitive entertainment industry.</p>
             </div>
             <div class="col col-half">
@@ -16,9 +16,10 @@
                     <a class="instagram" href="https://www.shopee.vn/"><i class="ti-instagram"></i></a>
                     <a class="shopee" href="https://www.shopee.vn/"><i class="ti-shopping-cart"></i></a>
                 </div>
+                
             </div>
+            
         </div>
-        <div class="banquyen">
-            <div class="copyright">Bản quyền thuộc về GroupM</div>
-        </div>
+
+        
     </div>

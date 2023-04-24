@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
+
 <div id="cartegory">
     <h1 class="cartegory-heading-big">
         ALL THE PRODUCTS
