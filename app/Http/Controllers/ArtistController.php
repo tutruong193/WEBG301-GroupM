@@ -44,8 +44,13 @@ class ArtistController extends Controller
         $artist->Img = $request->Img;
         $artist->Price = $request->Price;
         $artist->Description = $request->Description;
+        if (empty($firstName) || empty($lastName) || empty($birthDate) || empty($img) || empty($description)) {
+            // Hiển thị popup thông báo yêu cầu điền đầy đủ thông tin
+            return redirect()->back()->with('error', 'Vui lòng điền đầy đủ thông tin.');
+        }
         $artist->save();
-        return redirect('/adminartist')->with('success', 'artist updated successfully.');
+        // return redirect('/adminartist')->with('success', 'artist updated successfully.');
+        return redirect()->back()->with('success', 'Thêm mới thành công.');
     }
 
    public function store(Request $request)
@@ -67,7 +72,6 @@ class ArtistController extends Controller
         $artist->Price = $request->Price;
         $artist->Description = $request->Description;
         $artist->save();
-       $artist->save();
        return redirect('/adminartist')->with('success', 'artist created successfully.');
    }
    public function create()

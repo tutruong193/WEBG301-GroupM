@@ -14,11 +14,14 @@ use App\Http\Controllers\ArtistController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login');
 });
-
+Route::get('/register', function () {
+    return view('register');
+});
 Route::get('/home', [ArtistController::class, 'index']);
 Route::get('/artistAdd', [ArtistController::class, 'store']);
 Route::get('/adminartist', [ArtistController::class, 'index1']);
 Route::get('/detail', [ArtistController::class, 'show']);
 Route::resource('artists', ArtistController::class);
+Route::resource('customers', ArtistController::class);
