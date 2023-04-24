@@ -1,12 +1,10 @@
 @yield('main-section')
 <div id="footer">
-        <h2 class="row-heading">CONTACTS</h2>
+        <h2 class="row-heading">Manage Artist</h2>
         <div class="row">
             <div class="col col-half khoangcachdong">
-                <h2 class="heading">Keyboard shop</h2>
-                <p><i class="ti-location-pin"></i>118 Nguyen Khanh Toan - Cau Giay - Ha Noi</p>
-                <p><i class="ti-mobile"></i>+84 354676215</p>
-                <p><i class="ti-email"></i>truonganhtu190303@gmail.com</p>
+                <h2 class="heading">about us</h2>
+               <p>Introducing a reputable artist management company with professional credibility. With industry expertise, comprehensive artist development services, and trustworthiness, they provide guidance, strategic planning, and ethical representation for artists in the competitive entertainment industry.</p>
             </div>
             <div class="col col-half">
             <h2 class="heading2">Promotion Information</h2>
@@ -21,6 +19,6 @@
             </div>
         </div>
         <div class="banquyen">
-            <div class="copyright">Bản quyền thuộc về Trương Anh Tú</div>
+            <div class="copyright">Bản quyền thuộc về GroupM</div>
         </div>
     </div>
