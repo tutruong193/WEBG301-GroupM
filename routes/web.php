@@ -31,4 +31,4 @@ Route::resource('artists', ArtistController::class);
 Route::resource('customers', CustomerController::class);
 Route::get('/register',[CustomerController::class, 'index']);
 Route::post('/register', [CustomerController::class, 'store'])->name('customers.store');
-Route::get('contact',[MainController::class,'index']);
+Route::get('contact',[MainController::class,'contact']);
