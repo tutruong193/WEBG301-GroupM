@@ -1,7 +1,7 @@
 @extends('headeradmin')
 @section('main-content-admin')
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="margin-top:50px;">
 
 
     <!-- Main content -->
@@ -12,16 +12,14 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Fixed Header Table</h3>
-
+                <h3 class="card-title">Artist Management</h3>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
                     <div class="input-group-append">
-                      <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
+                    <form action="{{ route('artists.create') }}" method="GET">
+                      <button type="submit" class="btn btn-default">Add
                       </button>
+                    </form>
                     </div>
                   </div>
                 </div>
@@ -36,6 +34,7 @@
                       <th>First Name</th>
                       <th>Last Name</th>
                       <th>Birthday</th>
+                      <th>Price</th>
                       <th>Description</th>
                       <th>Action</th>
                     </tr>
@@ -48,6 +47,7 @@
                       <td>{{$artist ->FirstName}}</td>
                       <td>{{$artist ->LastName}}</td>
                       <td>{{$artist ->BirthDate}}</td>
+                      <td>{{$artist ->Price}}</td>
                       <td>{{$artist ->Description}}</td>
                       <td>
                             <a href="{{ route('artists.edit', $artist->id) }}" class="btn btn-primary">Edit</a>
