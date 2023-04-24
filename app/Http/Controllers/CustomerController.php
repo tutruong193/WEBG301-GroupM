@@ -10,10 +10,14 @@ class CustomerController extends Controller
     public function store(Request $request)
     {   
         $customer = new Customer();
-        $customer->name = $request->name;
-        $customer->email = $request->email;
-        $customer->password = $request->password;
+        $customer->name = $request->input('name');
+        $customer->email = $request->input('email');
+        $customer->password = $request->input('password');
         $customer->save();
-       return redirect('/register')->with('success', 'artist created successfully.');
+        return redirect('/')->with('success', 'Registration completed. Please login.');
    }
+   public function index()
+    {
+        return view('register');
+    }
 }
