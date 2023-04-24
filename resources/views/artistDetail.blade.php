@@ -152,7 +152,7 @@
 @extends('header')
 @section('main-section')
 <header>
-    <link rel="stylesheet" href="{{asset('css/sanpham.css')}}">
+    <link rel="stylesheet" href="{{asset('css/artisDetail.css')}}">
 </header>
 <div class="sanpham">
         <div class="container">

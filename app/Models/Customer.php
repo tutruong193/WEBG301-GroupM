@@ -11,7 +11,7 @@ class Customer extends Model
     use HasFactory;
     protected $table = 'customers';
     protected $primaryKey = 'id';
-    protected $fillable = ['name'];
+    protected $fillable = ['name','email','password'];
 
     public function Request(): HasMany
     {

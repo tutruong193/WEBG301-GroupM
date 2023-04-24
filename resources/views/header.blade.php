@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
                 <ul id="nav">
                     <li><a href="{{asset('home')}}">Home</a></li>
                     <li><a href="#" onclick="smoothScroll(document.getElementById('introduction'))">Introduction</a></li>
-                    <li><a href="#" onclick="smoothScroll(document.getElementById('cartegory'))">Products</a></li>
+                    <li><a href="#" onclick="smoothScroll(document.getElementById('artist.blade.php'))">Products</a></li>
                     <li><a href="#" onclick="smoothScroll(document.getElementById('footer'))">Contacts</a></li>
                 </ul>
                 <!--end nav-->

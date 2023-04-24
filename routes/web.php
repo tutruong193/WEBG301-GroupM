@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\CustomerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,10 +15,16 @@ use App\Http\Controllers\ArtistController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('login');
+});
+Route::get('/register', function () {
+    return view('register');
 });
 Route::get('/home', [ArtistController::class, 'index']);
-
+Route::get('/artistAdd', [ArtistController::class, 'store']);
+Route::get('/adminartist', [ArtistController::class, 'index1']);
 Route::get('/detail', [ArtistController::class, 'show']);
-
 Route::resource('artists', ArtistController::class);
+Route::resource('customers', CustomerController::class);
+Route::get('/register',[CustomerController::class, 'index']);
+Route::post('/register', [CustomerController::class, 'store'])->name('customers.store');
