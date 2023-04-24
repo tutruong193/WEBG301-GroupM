@@ -259,19 +259,18 @@ html{
 }
 .row-heading{
     padding-top: 70px;
-    margin-top: 70px;
     text-align: center;
     background-color: rgb(80, 30, 30);
 }
 .heading{
-    margin: 30px 25%;
+    margin: 300px 25%;
 }
 .heading2{
-    margin: 30px 0;
+    margin: 30px ;
 }
 .row{
     font-size: 14px;
-    padding-bottom: -30px;
+    padding-bottom: 0px;
 }
 .row i{
     padding-right: 10px;
@@ -323,13 +322,6 @@ html{
     text-align: center;
     justify-content: center;
     animation: fade ease 1s;
-}
-.banquyen{
-    float: left;
-    width: 100%;
-    padding-top: 40px;
-    padding-right: 30px;
-    background-color:  rgb(80, 30, 30); 
 }
 .copyright{
     float: right;

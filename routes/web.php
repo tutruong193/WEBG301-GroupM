@@ -1,7 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtistController;
-use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\RequestController;
@@ -31,7 +30,6 @@ Route::middleware([checkLogin::class])->group(function () {
     Route::resource('requests', RequestController::class);
 });
 Route::resource('artists', ArtistController::class);
-Route::resource('customers', CustomerController::class);
 
 // Route::get('/home', [ArtistController::class, 'index']);
 // Route::get('/artistAdd', [ArtistController::class, 'store']);
@@ -39,7 +37,4 @@ Route::resource('customers', CustomerController::class);
 // Route::post('/adminartist', [LoginController::class, 'postLogin'])->name('login.post'); 
 // Route::get('/detail', [ArtistController::class, 'show']);
 // Route::resource('artists', ArtistController::class);
-// Route::resource('customers', CustomerController::class);
-// Route::get('/register',[CustomerController::class, 'index']);
-// Route::post('/register', [LoginController::class, 'store'])->name('customers.store');
 
