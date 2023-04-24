@@ -18,6 +18,7 @@ return new class extends Migration
             $table->String('Img');
             $table->String('BirthDate');
             $table->String('Description');
+            $table->String('Price');
             $table->timestamps();
         });
     }

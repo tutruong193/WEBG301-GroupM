@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [ArtistController::class, 'index']);
+Route::get('/artistAdd', [ArtistController::class, 'store']);
 Route::get('/adminartist', [ArtistController::class, 'index1']);
 Route::get('/detail', [ArtistController::class, 'show']);
 Route::resource('artists', ArtistController::class);

@@ -42,8 +42,36 @@ class ArtistController extends Controller
         $artist->LastName = $request->LastName;
         $artist->BirthDate = $request->BirthDate;
         $artist->Img = $request->Img;
+        $artist->Price = $request->Price;
         $artist->Description = $request->Description;
         $artist->save();
         return redirect('/adminartist')->with('success', 'artist updated successfully.');
+    }
+
+   public function store(Request $request)
+    {       $request->validate([
+            'FirstName' => 'required',
+            'LastName' => 'required',
+            'BirthDate' => 'required',
+            'Img' => 'required',
+            'Price' => 'required',
+            'Description' => 'required',
+        ], [
+            'required' => 'Vui lòng điền đầy đủ thông tin.',
+        ]);
+       $artist = new Artist();
+        $artist->FirstName = $request->FirstName;
+        $artist->LastName = $request->LastName;
+        $artist->BirthDate = $request->BirthDate;
+        $artist->Img = $request->Img;
+        $artist->Price = $request->Price;
+        $artist->Description = $request->Description;
+        $artist->save();
+       $artist->save();
+       return redirect('/adminartist')->with('success', 'artist created successfully.');
+   }
+   public function create()
+    {
+        return view('adminAdd');
     }
 }
