@@ -23,15 +23,15 @@ Route::get('/', function () {
 Route::get('/home',[MainController::class,'index2'])->name('home');
 Route::get('/register',[LoginController::class, 'index']);
 Route::post('/store',[LoginController::class,'postLogin']);
-Route::post('/register', [LoginController::class, 'store'])->name('users.store');
+Route::post('/register', [LoginController::class, 'store'])->name('user.store');
 Route::get('/admin/artist',[MainController::class,'index'])->name('admin')->middleware('auth');
 Route::get('/artistAdd', [ArtistController::class, 'store']);
-Route::middleware([checkLogin::class])->group(function () {
-    Route::resource('artists', ArtistController::class);
+Route::middleware(['auth'])->group(function () {
     Route::resource('requests', RequestController::class);
 });
 Route::resource('artists', ArtistController::class);
 Route::resource('users', UserController::class);
+Route::resource('requests', RequestController::class);
 Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::get('/artist', [ArtistController::class, 'index2'])->name('artistlist');
 Route::get('/edit', [UserController::class, 'index'])->name('profile.edit');

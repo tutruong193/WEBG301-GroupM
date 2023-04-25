@@ -16,6 +16,7 @@ return new class extends Migration
             $table->String('FirstName');
             $table->String('LastName');
             $table->String('Img');
+            $table->String('Price');
             $table->foreignId('artists_id')->constrained('artists');
             $table->foreignId('users_id')->constrained('users');
             $table->timestamps();

@@ -11,7 +11,7 @@ class Request extends Model
     use HasFactory;
     protected $table = 'requests';
     protected $primaryKey = 'id';
-    protected $fillable = ['Firstname', 'Lastname','Img'];
+    protected $fillable = ['Firstname', 'Lastname','Img','artists_id','users_id'];
 
     public function Customer(): BelongsTo
     {
