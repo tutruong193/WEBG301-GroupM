@@ -24,8 +24,8 @@
         <div id="header">
             <!--begin-->
                 <ul id="nav">
-                    <li><a href="./giaodien.php">Home</a></li>
-                    <li><a href="#" >Introduction</a></li>
+                    <li><a href="{{route('home')}}">Home</a></li>
+                    <li><a href="{{route('introduction')}}" >Introduction</a></li>
                     <li><a href="{{route('artistlist')}}" >Artist List</a></li>
                     <li><a href="{{route('contact')}}" >Contacts</a></li>
                 </ul>

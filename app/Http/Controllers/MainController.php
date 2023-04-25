@@ -27,4 +27,8 @@ class MainController extends Controller
     {
         return view('contact');
     }
+    public function introduction()
+    {
+        return view('introduction');
+    }
 }

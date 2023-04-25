@@ -40,6 +40,7 @@ Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edi
 Route::post('/send-email', [RequestController::class,'sendEmail'])->name('send-email');
 
 Route::get('/logout', [LoginController::class, 'logout']);
+Route::get('/introduction', [MainController::class, 'introduction'])->name('introduction');
 // Route::get('/home', [ArtistController::class, 'index']);
 // Route::get('/artistAdd', [ArtistController::class, 'store']);
 // Route::get('/adminartist', [ArtistController::class, 'index1'])->name('adminartist');

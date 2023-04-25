@@ -1,10 +1,12 @@
 @yield('main-section')
 <div id="footer">
-        <h2 class="row-heading">Manage Artist</h2>
-        <div class="row">
+        <h2 class="row-heading-footer">Manage Artist</h2>
+        <div class="row-footer">
             <div class="col col-half khoangcachdong">
-                <h2 class="heading">About us</h2>
-               <p>Introducing a reputable artist management company with professional credibility. With industry expertise, comprehensive artist development services, and trustworthiness, they provide guidance, strategic planning, and ethical representation for artists in the competitive entertainment industry.</p>
+                <h2 class="heading-footer" style="text-align:left; padding-top:35px">About us</h2>
+               <p style="text-align:justify; padding-right:80px">Introducing a reputable artist management company with professional credibility. With industry expertise, comprehensive artist development services, and trustworthiness, they provide guidance, strategic planning, and ethical representation for artists in the competitive entertainment industry.
+                With industry expertise, comprehensive artist development services, and trustworthiness, they provide guidance, strategic planning, and ethical representation for artists in the competitive entertainment industry.
+               </p>
             </div>
             <div class="col col-half">
             <h2 class="heading2">Promotion Information</h2>
