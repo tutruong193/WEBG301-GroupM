@@ -23,7 +23,7 @@
     <div class="card-body">
       <p class="login-box-msg">Register a new membership</p>
 
-      <form action="{{route('users.store')}}" method="POST">
+      <form action="{{route('user.store')}}" method="POST">
       @csrf 
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Full name" name="name">

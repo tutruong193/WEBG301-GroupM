@@ -16,6 +16,8 @@
   <meta name="author" content="" />
   <link rel="stylesheet" type="text/css" href="{{asset('css/giaodien.css')}}">
   <link rel="stylesheet" href="{{asset('icon/themify-icons/themify-icons.css')}}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </head>
 <div class = "header">
