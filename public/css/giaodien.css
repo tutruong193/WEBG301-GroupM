@@ -253,31 +253,56 @@ html{
 
 
 #footer{
-    height: 300px;
+    height: 30%;
     background-color: rgb(80, 30, 30);
     color: #fff;
+    float:inline-end;
 }
+.row-heading-footer{
+    padding-top:30px;
+    text-align:center;
+    padding-left: 50px;
+    font-size:30px;
+    
+    
+}
+.row-footer{
+padding-top:20px;
+    text-align:left;
+    padding-left: 50px;
+    font-size:15px;
+}
+    .row-footer p{
+        padding-top:25px;
+    }
+
 .row-heading{
-    padding-top: 70px;
-    margin-top: 70px;
-    text-align: center;
-    background-color: rgb(80, 30, 30);
+    padding-top: 100px;
+    margin-top: 100px;
+    text-align:left;
+    padding-left: 50px;
+    font-size:50px;
+    
+    
 }
 .heading{
-    margin: 30px 25%;
+    margin: 10px 25%;
 }
 .heading2{
     margin: 30px 0;
 }
 .row{
-    font-size: 14px;
-    padding-bottom: -30px;
+    font-size: 30px;
+    padding: 130px;
+
+    position:reltive;
+   
 }
 .row i{
     padding-right: 10px;
 }
 .row p{
-    line-height: 25px;
+    line-height: 40px;
     margin-left: 25%;
 }
 .input-email{
