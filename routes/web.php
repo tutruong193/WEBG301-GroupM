@@ -25,6 +25,7 @@ Route::get('/register',[LoginController::class, 'index']);
 Route::post('/store',[LoginController::class,'postLogin']);
 Route::post('/register', [LoginController::class, 'store'])->name('user.store');
 Route::get('/admin/artist',[MainController::class,'index'])->name('admin')->middleware('auth');
+Route::get('/admin/request',[RequestController::class,'index'])->name('admin')->middleware('auth');
 Route::get('/artistAdd', [ArtistController::class, 'store']);
 Route::middleware(['auth'])->group(function () {
     Route::resource('requests', RequestController::class);

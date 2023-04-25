@@ -92,7 +92,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="{{asset('/admin/request')}}" class="nav-link">
                 Booking Request
             </a>
           </li>
