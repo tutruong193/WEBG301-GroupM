@@ -37,6 +37,7 @@ Route::get('/contact', [MainController::class, 'contact'])->name('contact');
 Route::get('/artist', [ArtistController::class, 'index2'])->name('artistlist');
 Route::get('/edit', [UserController::class, 'index'])->name('profile.edit');
 Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
+Route::post('/send-email', [RequestController::class,'sendEmail'])->name('send-email');
 
 Route::get('/logout', [LoginController::class, 'logout']);
 // Route::get('/home', [ArtistController::class, 'index']);

@@ -6,6 +6,8 @@ use App\Models\Artist;
 use App\Models\Request as ModelsRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NotificationMail;
 
 class RequestController extends Controller
 {
@@ -49,5 +51,20 @@ class RequestController extends Controller
         $request->delete();
         return redirect('/admin/request')->with('success', 'request deleted successfully.');
     }
+    public function sendEmail()
+{
+    $user = Auth::user(); // Lấy thông tin người dùng hiện tại
+    $email = $user->email; // Lấy địa chỉ email của người dùng
+    $data = [
+        'name' => $user->name,
+        'message' => 'Đây là nội dung email gửi từ Laravel.',
+    ];
+
+    Mail::to('truonganhtu190303@gmail.com')->send(new NotificationMail($data)); // Gửi email với dữ liệu và template đã tạo
+
+    // Thông báo sau khi gửi email thành công
+    return redirect()->back()->with('status', 'Gửi email thành công'); // Chuyển hướng về trang trước đó (adminartist) với thông báo thành công
+
+}
 
 }

@@ -5,7 +5,7 @@
 
 <div id="cartegory">
     <h1 class="cartegory-heading-big">
-        ALL THE PRODUCTS
+        ALL ARTISTS
     </h1>
     <div class="cartegory-kit">
         <div class="cartegory-products row">

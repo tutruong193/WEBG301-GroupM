@@ -44,7 +44,10 @@
                       <td>{{$request ->Price}}</td>
                       <td>{{$request ->users_id}}</td>
                       <td>
-                            <a href="" class="btn btn-primary">Accept</a>
+                      <form action="{{ route('send-email') }}" method="POST" style="display: inline-block">
+                                @csrf
+                                <button type="submit" class="btn btn-danger" >Accept</button>
+                            </form>
                             <form action="{{ route('requests.destroy', $request->id) }}" method="POST" style="display: inline-block">
                                 @csrf
                                 @method('DELETE')
