@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Artist extends Model
 {
@@ -12,8 +13,8 @@ class Artist extends Model
     protected $primaryKey = 'id';
     protected $fillable = ['Firstname', 'Lastname', 'Description','Birthdate','Img'];
 
-    public function getCategory()
+    public function Request(): BelongsToMany
     {
-        return $this->belongsToMany(Category::class,'artist_id', 'id');
+        return $this->belongsToMany(Request::class);
     }
 }
