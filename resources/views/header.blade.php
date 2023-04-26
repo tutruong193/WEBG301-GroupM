@@ -35,7 +35,7 @@
       <div class="header_section">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-               <a class="logo" href="index.html"><img src=""></a>
+               <a class="logo" href="{{route('home')}}"><img src=""></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
                </button>
@@ -57,8 +57,8 @@
                   <form class="form-inline my-2 my-lg-0">
                      <div class="search_icon">
                         <ul>
-                            <li><a href="/edit"><i class="ti-user"></i></a></li>
-                           <li><a href="/logout"><i class="ti-share"></i></a></li>
+                            <li><a href="/edit"><i class="ti-user" style="color:white"></i></a></li>
+                           <li><a href="/logout"><i class="ti-share" style="color:white"></i></a></li>
                         </ul>
                      </div>
                   </form>

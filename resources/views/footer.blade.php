@@ -7,10 +7,10 @@
                   <h2 class="useful_text">Useful link </h2>
                   <div class="footer_menu">
                      <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="design.html">Our Designe</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="{{route('home')}}">Home</a></li>
+                        <li><a href="{{route('introduction')}}">Introduction</a></li>
+                        <li><a href="{{route('artistlist')}}">Artists</a></li>
+                        <li><a href="{{route('contact')}}">Contact Us</a></li>
                      </ul>
                   </div>
                </div>
