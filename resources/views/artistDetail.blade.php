@@ -1,52 +1,30 @@
-
-@extends('header')
-@section('main-section')
-<header>
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-</header>
-<div class="sanpham">
-        <div class="container">
-            <p>a</p>
-            <p>a</p>
-            <p style="font-size: 30px; font-weight:bold; padding:20px">Information of {{$artist -> FirstName}} {{$artist -> LastName}}</p>
-            <div class="product-content row" >
-                <div class="product-content-left row"  >
-                    <div class="product-content-left-big-img" >
-                        <img src="{{$artist -> Img}}" alt="" >
-                        <input type="hidden" class="form-control" id="artist_Img" name="artist_Img" value="{{$artist -> Img}}">
-                    </div>
-                </div>
-                <div class="product-content-right" style="width: 50%">
-                <form action="{{ route('requests.store') }}" method="post">
-                @csrf
-                        <div class="product-content-right-product-name">
-                            <p style="font-size:20px;color:black;font-weight:bold;">{{$artist -> FirstName}} {{$artist -> LastName}}</p>
-                            <input type="hidden" class="form-control" id="artist_FirstName" name="artist_FirstName" value="{{$artist -> FirstName}}">
-                            <input type="hidden" class="form-control" id="artist_LastName" name="artist_LastName" value="{{$artist -> LastName}}">
-                            <input type="hidden" class="form-control" id="artist_id" name="artist_id" value="{{$artist -> id}}">
-                        </div>
-                        <div class="product-content-right-product-birthdate">
-                            <p>{{$artist -> BirthDate}}</p>
-                        </div>
-                        <div class="product-content-right-product-description">
-                            <p>{{$artist -> Price}}</p> 
-                            <input type="hidden" class="form-control" id="artist_Price" name="artist_Price" value="{{$artist -> Price}}">
-                        </div>
-                        <div class="product-content-right-product-description">
-                            <p>{{$artist -> Description}}</p> 
-                            
-                        </div>
-                        <div class="product-content-right-product-button" style="text-align: center">
-                            <button type="submit" id="addBtn" style="width:25%;height:40px ;background-color: rgb(186, 51, 51); border-radius:5px; " >
-                                <i class="ti-shopping-cart" name="add-to-cart" style="padding-left:10px; color:white;font-style:initial"> Add list</i>
-                            </button>
-                        </div>
-                </form>
-                </div>
+@extends('footer')
+@section('main-content')
+<div class="about_section layout_padding">
+         <div class="container">
+            <div class="about_section_2">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="image_2"><img src="{{$artist -> Img}}"></div>
+                  </div>
+                  <div class="col-md-6">
+                  <form action="{{ route('requests.store') }}" method="post">
+                    @csrf
+                     <h1 class="about_taital" style="padding-top: 0px;">{{$artist -> FirstName}} {{$artist -> LastName}}</h1>
+                     <input type="hidden" class="form-control" id="artist_FirstName" name="artist_FirstName" value="{{$artist -> FirstName}}">
+                     <input type="hidden" class="form-control" id="artist_LastName" name="artist_LastName" value="{{$artist -> LastName}}">
+                     <input type="hidden" class="form-control" id="artist_id" name="artist_id" value="{{$artist -> id}}">
+                     <p class="about_text">Birth Date: {{$artist -> BirthDate}}</p>
+                     <p class="about_text">Price: {{$artist -> Price}}</p>
+                     <input type="hidden" class="form-control" id="artist_Price" name="artist_Price" value="{{$artist -> Price}}">
+                     <p class="about_text">Description: {{$artist -> Description}}</p>
+                     <div class="readmore_bt"><button type="submit" class="button"id="addBtn" style="width: 100%;float: left;font-size: 18px;color: #ffffff;background-color: #7c2c0c;border: 1px solid #b48569;padding: 8px 5px;text-align: center;font-weight: 500;">Hide</button></div>
+                    </form>
+                  </div>
+               </div>
             </div>
-        </div>
+         </div>
+      </div>
 
-    </div>
-    
 @endsection
-@extends ('footer')
+@extends ('header')

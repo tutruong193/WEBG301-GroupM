@@ -52,5 +52,41 @@ class DatabaseSeeder extends Seeder
             ]
         );
         $artist1->save();
+        $artist2 = new \App\Models\Artist(
+            [
+                'FirstName' => 'Son',
+                'LastName' => 'Tung',
+                'Img' => 'https://vtv1.mediacdn.vn/thumb_w/650/2020/8/5/11707537937887109944759096401674123002289793o-1596615779281752133639-crop-1596615789986723827443.jpg',
+                'BirthDate' => '1999',
+                'Price'=> '1000',
+                'Description' => 'The best singer in VietNam'
+
+            ]
+        );
+        $artist2->save();
+        $artist3 = new \App\Models\Artist(
+            [
+                'FirstName' => 'Son',
+                'LastName' => 'Tung',
+                'Img' => 'https://vtv1.mediacdn.vn/thumb_w/650/2020/8/5/11707537937887109944759096401674123002289793o-1596615779281752133639-crop-1596615789986723827443.jpg',
+                'BirthDate' => '1999',
+                'Price'=> '1000',
+                'Description' => 'The best singer in VietNam'
+
+            ]
+        );
+        $artist3->save();
+        $artist4 = new \App\Models\Artist(
+            [
+                'FirstName' => 'Son',
+                'LastName' => 'Tung',
+                'Img' => 'https://vtv1.mediacdn.vn/thumb_w/650/2020/8/5/11707537937887109944759096401674123002289793o-1596615779281752133639-crop-1596615789986723827443.jpg',
+                'BirthDate' => '1999',
+                'Price'=> '1000',
+                'Description' => 'The best singer in VietNam'
+
+            ]
+        );
+        $artist4->save();
     }
 }
