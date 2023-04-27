@@ -20,16 +20,12 @@ use App\Http\Middleware\checkLogin;
 
 Route::get('/', function () {
     return view('login');})->name('login');
-Route::get('/home',[MainController::class,'index2'])->name('home');
+Route::get('/home',[MainController::class,'index'])->name('home');
 Route::get('/register',[LoginController::class, 'index']);
 Route::post('/store',[LoginController::class,'postLogin']);
-Route::post('/register', [LoginController::class, 'store'])->name('user.store');
-Route::get('/admin/artist',[MainController::class,'index'])->name('admin')->middleware('auth');
-Route::get('/admin/request',[RequestController::class,'index'])->name('admin')->middleware('auth');
-Route::get('/artistAdd', [ArtistController::class, 'store']);
-Route::middleware(['auth'])->group(function () {
-    Route::resource('requests', RequestController::class);
-});
+Route::post('/register', [LoginController::class, 'store']);
+Route::get('/admin/artist',[ArtistController::class,'index2']);
+Route::get('/admin/request',[RequestController::class,'index']);
 Route::resource('artists', ArtistController::class);
 Route::resource('users', UserController::class);
 Route::resource('requests', RequestController::class);
@@ -38,7 +34,6 @@ Route::get('/artist', [ArtistController::class, 'index2'])->name('artistlist');
 Route::get('/edit', [UserController::class, 'index'])->name('profile.edit');
 Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
 Route::post('/send-email', [RequestController::class,'sendEmail'])->name('send-email');
-
 Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/introduction', [MainController::class, 'introduction'])->name('introduction');
 // Route::get('/home', [ArtistController::class, 'index']);
