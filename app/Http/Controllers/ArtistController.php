@@ -27,7 +27,7 @@ class ArtistController extends Controller
     public function index1()
     {
         $artists = Artist::all();
-        return view('adminArtist', ['artists' => $artists]);
+        return view('artist', ['artists' => $artists]);
     }
     public function edit($id)
     {

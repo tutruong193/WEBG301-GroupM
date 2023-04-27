@@ -44,7 +44,7 @@
                       <td>{{$request ->Price}}</td>
                       <td>{{$request ->users_id}}</td>
                       <td>
-                      <form action="{{ route('send-email') }}" method="POST" style="display: inline-block">
+                      <form action="#" method="POST" style="display: inline-block">
                                 @csrf
                                 <button type="submit" class="btn btn-danger" >Accept</button>
                             </form>

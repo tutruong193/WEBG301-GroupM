@@ -56,14 +56,13 @@ class RequestController extends Controller
     public function sendEmail(Request $request)
     {
 
-       $users = User::all();
+       $request = ModelsRequest::all();
        $message = [
            'type' => 'Create task',
            'content' => 'has been created!',
        ];
-       SendEmail::dispatch($message, $users)->delay(now()->addMinute(1));
-    
-       return redirect()->back();
+       return view('user', ['requests' => $request]);
+
     }
 
 }
